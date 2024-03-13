@@ -1,0 +1,6 @@
+.divContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 0.3fr);
+  gap: 0.3%;
+  width: 155%;
+}

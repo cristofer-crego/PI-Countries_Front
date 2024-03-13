@@ -1,0 +1,10 @@
+.divContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 0.2fr);
+  gap: 1.3%;
+  width: 155%;
+  margin-bottom: 20px;
+}
+.divCards {
+  margin-bottom: 300px;
+}

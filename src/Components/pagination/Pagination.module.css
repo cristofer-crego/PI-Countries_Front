@@ -1,0 +1,39 @@
+.container {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  top: 65%;
+  right: 7%;
+  border-color: #ff0000;
+  z-index: 3;
+  .btn {
+    background-color: #242424;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+    svg {
+      width: 10px;
+    }
+  }
+
+  .btn[disabled] {
+    background-color: #474747;
+    cursor: no-drop;
+  }
+
+  .input {
+    height: 30px;
+    width: 50px;
+    text-align: center;
+    border: 1px solid #242424;
+    border-radius: 3px;
+  }
+}

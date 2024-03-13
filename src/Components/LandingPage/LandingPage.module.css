@@ -1,0 +1,61 @@
+.div {
+  background: url("./Landing.jpg") center center;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+}
+
+.divContainer {
+  left: 10%;
+  height: 95vh;
+  width: 95vw;
+  z-index: 1;
+}
+.texto {
+  position: absolute;
+  top: 30%;
+  right: 0%;
+  font-size: 50px;
+}
+
+.h1 {
+  position: absolute;
+  top: 5%;
+  right: 30%;
+  width: 30%;
+  height: 10%;
+  font-size: 80px;
+  color: #ee0000;
+  -webkit-text-stroke: 2px #ffffff;
+}
+.btn {
+  position: absolute;
+  top: 80%;
+  right: 30%;
+  width: 30%;
+  height: 10%;
+
+  padding: 10px 20px;
+  text-transform: uppercase;
+  border-radius: 8px;
+  font-size: 17px;
+  font-weight: 500;
+  color: #ffffff #081ee4;
+  text-shadow: none;
+  background: transparent;
+  cursor: pointer;
+  box-shadow: transparent;
+  border: 1px solid #ffffff;
+  transition: 0.5s ease;
+  user-select: none;
+}
+
+.btn:hover,
+.btn:focus {
+  color: #ffffff;
+  background: #081ee4;
+  border: 1px solid #008cff;
+  text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 20px #ffffff;
+  box-shadow: 0 0 5px #008cff, 0 0 20px #008cff, 0 0 50px #ff0101,
+    0 0 100px #ec1010;
+}
