@@ -12,8 +12,8 @@ export const ADD_FOR_NAME = "ADD_FOR_NAME";
 export const ADD_FOR_ID = "ADD_FOR_ID";
 export const BTN_ALL = "BTN_ALL";
 
-let URL_COUNTRY = "/countries/";
-let URL_ACTIVITY = "/activities/";
+let URL_COUNTRY = "countries/";
+let URL_ACTIVITY = "activities/";
 
 const isValidActivity = (activity) => {
   return (
