@@ -11,7 +11,6 @@ import HomePage from "./Components/HomePage/HomePage";
 import LandingPage from "./Components/LandingPage/LandingPage";
 import Activities from "./Components/Activities/Activities";
 
-axios.defaults.baseURL = "https://pi-countriesback.up.railway.app/";
 function App() {
   return (
     <>

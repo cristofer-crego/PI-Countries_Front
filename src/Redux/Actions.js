@@ -1,5 +1,5 @@
 import axios from "axios";
-
+import URL from "../helpers/ruts";
 export const CREATE_ACT = "CREATE_ACT";
 export const ADD_ACT = "ADD_ACT";
 export const DELETE_ACT = "DELETE_ACT";
@@ -12,8 +12,8 @@ export const ADD_FOR_NAME = "ADD_FOR_NAME";
 export const ADD_FOR_ID = "ADD_FOR_ID";
 export const BTN_ALL = "BTN_ALL";
 
-let URL_COUNTRY = "countries/";
-let URL_ACTIVITY = "activities/";
+let URL_COUNTRY = `${URL}countries/`;
+let URL_ACTIVITY = `${URL}activities/`;
 
 const isValidActivity = (activity) => {
   return (
