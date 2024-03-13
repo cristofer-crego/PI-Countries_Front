@@ -2,6 +2,7 @@
 
 //import libraries
 import { Routes, Route } from "react-router-dom";
+import axios from "axios";
 
 //import Components
 import DetailPage from "./Components/DetailPage/DetailPage";
@@ -10,6 +11,7 @@ import HomePage from "./Components/HomePage/HomePage";
 import LandingPage from "./Components/LandingPage/LandingPage";
 import Activities from "./Components/Activities/Activities";
 
+axios.defaults.baseURL = "https://pi-countriesback.up.railway.app/";
 function App() {
   return (
     <>
