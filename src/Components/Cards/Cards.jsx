@@ -8,7 +8,7 @@ export const Cards = () => {
   const [porPagina, setPorPagina] = useState(10);
   let countriesFilter = useSelector((state) => state.countriesFilter);
   const maximo = countriesFilter.length / porPagina;
-  console.log(maximo);
+
   return (
     <div className={s.divContainer}>
       {countriesFilter.length === 0 ? (

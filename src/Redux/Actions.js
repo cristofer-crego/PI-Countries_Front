@@ -1,5 +1,5 @@
 import axios from "axios";
-import URL from "../helpers/ruts";
+
 export const CREATE_ACT = "CREATE_ACT";
 export const ADD_ACT = "ADD_ACT";
 export const DELETE_ACT = "DELETE_ACT";
@@ -12,8 +12,8 @@ export const ADD_FOR_NAME = "ADD_FOR_NAME";
 export const ADD_FOR_ID = "ADD_FOR_ID";
 export const BTN_ALL = "BTN_ALL";
 
-let URL_COUNTRY = `${URL}countries/`;
-let URL_ACTIVITY = `${URL}activities/`;
+let URL_COUNTRY = "http://localhost:3001/countries/";
+let URL_ACTIVITY = "http://localhost:3001/activities/";
 
 const isValidActivity = (activity) => {
   return (
@@ -25,23 +25,41 @@ const isValidActivity = (activity) => {
     activity.country
   );
 };
+
 export const createAct = (activity) => {
-  try {
-    return async (dispatch) => {
+  return async (dispatch) => {
+    try {
       if (!isValidActivity(activity)) {
         return window.alert("Enter a valid activity");
       }
-      const { data } = await axios.post(URL_ACTIVITY, activity);
 
-      window.alert("Activity created successfully!");
-      return dispatch({
+      const response = await axios.post(URL_ACTIVITY, activity, {
+        timeout: 5000, // Establece un tiempo de espera de 5 segundos
+      });
+      const data = response.data;
+
+      if (!data) {
+        window.alert("Error loading activity");
+      } else {
+        window.alert("Activity created successfully!");
+      }
+
+      dispatch({
         type: CREATE_ACT,
         payload: data,
       });
-    };
-  } catch (error) {
-    window.alert(error.response.data.error);
-  }
+    } catch (error) {
+      console.log("este es el error: ", error);
+
+      if (error.response) {
+        window.alert(error.response.data.error);
+      } else if (error.request) {
+        window.alert("Error: Unable to connect to the backend.");
+      } else {
+        window.alert("An error occurred while creating the activity");
+      }
+    }
+  };
 };
 export const addAct = () => {
   try {

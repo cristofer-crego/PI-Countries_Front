@@ -2,7 +2,6 @@
 
 //import libraries
 import { Routes, Route } from "react-router-dom";
-import axios from "axios";
 
 //import Components
 import DetailPage from "./Components/DetailPage/DetailPage";

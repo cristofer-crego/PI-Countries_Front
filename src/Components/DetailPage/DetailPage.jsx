@@ -29,7 +29,7 @@ const DetailPage = () => {
     population,
     Activities,
   } = countriesID;
-
+  console.log(countriesID.capital);
   const renderActivities = () => {
     return (
       <div>
